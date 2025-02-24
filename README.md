@@ -9,5 +9,21 @@
 
 ### Importing the dependencies
 ```python
-
+import tensorflow as tf
+from tensorflow import keras
+#from tensorflow.keras import layers
+import numpy as np
+import matplotlib.pyplot as plt
 ```
+
+### Load Data
+```python
+(X_train, y_train), (X_test, y_test) = keras.datasets.mnist.load_data()
+```
+
+### Normalize the independent Variable
+```python
+(X_train, X_test) = X_train / 255.0, X_test / 255.0
+```
+
+
