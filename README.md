@@ -4,3 +4,10 @@
 
 ### Task
 > We will build a model that recognizes handwritten digits (0-9) using MNIST dataset.
+
+## Python: Keras Code
+
+### Importing the dependencies
+```python
+
+```
