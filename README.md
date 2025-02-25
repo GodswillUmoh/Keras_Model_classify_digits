@@ -65,4 +65,17 @@ test_loss, test_acc = model.evaluate(X_test, y_test)
 print(f'Test Accuracy {test_acc}')
 ```
 
+### Visualization
+```python
+# Plot sample predictions
+plt.figure(figsize=(10, 5))
+for i in range(10):
+    plt.subplot(2, 5, i+1)
+    plt.imshow(X_test[i], cmap='gray')
+    plt.axis('off')
+    predicted_label = np.argmax(predictions[i])
+    plt.title(f'Pred: {predicted_label}')
+plt.show()
+```
+
 [To see code in the terminal, kindly click here](https://colab.research.google.com/drive/19U84C4of-dOWt1_tCYImCY8HC2T-jHpA#scrollTo=BvTIEijhtJ7s)
