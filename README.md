@@ -26,4 +26,43 @@ import matplotlib.pyplot as plt
 (X_train, X_test) = X_train / 255.0, X_test / 255.0
 ```
 
+### Print X_train
+```python
+print(X_train.shape)
+```
 
+### Building the model
+```python
+model = keras.Sequential([
+    keras.layers.Flatten(input_shape=(28, 28)),
+    keras.layers.Dense(128, activation= 'relu'),
+    keras.layers.Dense(10, activation= 'softmax')
+])
+```
+
+### Compile
+```python
+model.compile( optimizer='adam', loss= 'sparse_categorical_crossentropy', metrics= ['accuracy'])
+```
+
+### Train model with 10 epochs
+```python
+model.fit(X_train, y_train, epochs= 10)
+```
+
+### Model Summary
+```python
+model.summary()
+```
+
+### Evaluate model
+```python
+test_loss, test_acc = model.evaluate(X_test, y_test)
+```
+
+### Print Accuracy
+```python
+print(f'Test Accuracy {test_acc}')
+```
+
+[To see code in the terminal, kindly click here](https://colab.research.google.com/drive/19U84C4of-dOWt1_tCYImCY8HC2T-jHpA#scrollTo=BvTIEijhtJ7s)
